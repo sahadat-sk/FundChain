@@ -8,21 +8,27 @@
     margin: auto;
   }
 
-  @media(max-width:998){
+  @media only screen and (max-width:998px){
     .charity-desc{
         height: 1000rem;
-    width: 54em;
+    width: 54rem;
 
     }
   }
 
-  @media(max-width:558){.charity-desc{
+  @media only screen and (max-width:558px){.charity-desc{
     height: 140rem;
     width: 62rem;
     margin:auto;
   }
   }
 
+  @media(max-width:4000px){.charity-desc{
+    height: 41rem;
+    width: 96rem;
+    margin:auto;
+  }
+  }
   
 
 
@@ -57,20 +63,20 @@ margin-bottom: 35rem;
 margin-top: 17rem;
 }
 
-@media(max-width:1011){
+@media(max-width:1011px){
     .div2{
     
    
  
 
   height: 0rem;
-  /* width: 31rem;  */
+  width: 31rem; 
   margin-bottom: 8rem;
   margin-top: 5rem;
   }
   }
 
-  @media(max-width:558){
+  @media(max-width:558px){
     .div2{
     
    
@@ -78,8 +84,8 @@ margin-top: 17rem;
         background-color: blue;
   height: 0rem;
   width: 31rem; 
-  margin-bottom: 2px;
-  margin-top: 1px;
+  margin-bottom: 32rem;
+  margin-top: 5rem;
   }
   }
 
@@ -94,7 +100,7 @@ margin-top: 17rem;
    
   
   }
-  @media(max-width:558){.div1{
+  @media(max-width:558px){.div1{
     height: 79rem;
     width: 52rem;
     margin-left:auto;
@@ -134,15 +140,15 @@ font-size: 1.5rem;
     margin-top: 3rem;
   }
 
-  /* @media(max-width:998px){
+  @media(max-width:998px){
     .donate-btn{
     background-color: blue;
     }
   }
-   */
+  
 
 
-@media(max-width:998px){
+@media only screen and (max-width:2000px){
     html{
         display: flex;
         font-size:55%;
@@ -153,7 +159,7 @@ font-size: 1.5rem;
     }
 }
 
-@media(max-width:558px){
+@media only screen and (max-width:682px){
     html{
         display: flex;
         font-size:35%;
@@ -165,9 +171,16 @@ font-size: 1.5rem;
     }
 }
 
-@media(max-width:558px){
+@media(max-width:682px){
     main{
-        /* margin:auto; */
+        margin:auto;
+        width:50%;
+    }
+}
+
+@media only screen and (max-width:2000px){
+    main{
+        margin:auto;
         width:50%;
     }
 }
@@ -175,6 +188,6 @@ font-size: 1.5rem;
 @media(max-width:998px){
     main{
         /* margin:auto; */
-        width:50%;
+        /* width:50%; */
     }
 }
