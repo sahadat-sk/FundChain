@@ -1,0 +1,35 @@
+.logo{
+    padding: 13px 0px 13px 9px;padding: 13px 0px 13px 9px;
+    width: auto;
+    height: 32px;
+    
+    /* margin: 10px 0px 17px 66px; */
+    margin :auto;
+      
+      
+}
+
+
+@media(max-width:998px){
+    .logo{
+        display: flex;
+        font-size:55%;
+        align-items: center;
+        justify-content: center;
+        height:3rem;
+        width:auto;
+
+    }
+}
+
+
+@media(max-width:558px){
+    .logo{
+        display: flex;
+        font-size:55%;
+        align-items: center;
+        justify-content: center;
+        height:2rem;
+        width:auto;
+    }
+}

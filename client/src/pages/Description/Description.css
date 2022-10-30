@@ -1,0 +1,180 @@
+.charity-desc{
+    height: 41rem;
+    width: 60rem;
+    background: rgba(255, 255, 255, 0.199);
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    margin: auto;
+  }
+
+  @media(max-width:998){
+    .charity-desc{
+        height: 1000rem;
+    width: 54em;
+
+    }
+  }
+
+  @media(max-width:558){.charity-desc{
+    height: 140rem;
+    width: 62rem;
+    margin:auto;
+  }
+  }
+
+  
+
+
+
+.desc-heading{
+    color: white;
+margin: auto;
+  margin-left: auto;
+font-size: 4rem;
+margin-left: 4rem;
+    
+}
+.main{
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+
+.donation{
+    display:flex;
+    flex-direction: column;
+}
+.div2{
+    margin-left: auto;
+    margin-right: auto;
+  /* margin-top: auto;
+  margin-bottom: auto;
+margin-bottom: auto; */
+height: 0rem;
+width: 31rem;
+margin-bottom: 35rem;
+margin-top: 17rem;
+}
+
+@media(max-width:1011){
+    .div2{
+    
+   
+ 
+
+  height: 0rem;
+  /* width: 31rem;  */
+  margin-bottom: 8rem;
+  margin-top: 5rem;
+  }
+  }
+
+  @media(max-width:558){
+    .div2{
+    
+   
+ 
+        background-color: blue;
+  height: 0rem;
+  width: 31rem; 
+  margin-bottom: 2px;
+  margin-top: 1px;
+  }
+  }
+
+.div1{
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    height: 59rem;
+    width: 68rem;
+   
+  
+  }
+  @media(max-width:558){.div1{
+    height: 79rem;
+    width: 52rem;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:auto;
+    margin-top:-9em;
+    color: blue;
+    /* background-color: blue; */
+  }
+  }
+
+
+  .past-donors{
+    margin-top: 8rem;
+font-size: 1.5rem;
+/* color:blue; */
+
+  }
+
+.progress-text{
+    margin-bottom: 3rem;
+    font-size: 2rem;
+  }
+.progress-bar{
+    height: 1.5rem;
+    width: 31rem;
+    background-color: white;
+    border-radius: 16rem;
+
+}
+
+.donate-btn{
+    height: 4rem;
+    width: 14rem;
+    margin: auto;
+      margin-top: auto;
+    margin-top: 3rem;
+  }
+
+  /* @media(max-width:998px){
+    .donate-btn{
+    background-color: blue;
+    }
+  }
+   */
+
+
+@media(max-width:998px){
+    html{
+        display: flex;
+        font-size:55%;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
+        min-height: 100%;
+    }
+}
+
+@media(max-width:558px){
+    html{
+        display: flex;
+        font-size:35%;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
+        min-height: 100%;
+
+    }
+}
+
+@media(max-width:558px){
+    main{
+        /* margin:auto; */
+        width:50%;
+    }
+}
+
+@media(max-width:998px){
+    main{
+        /* margin:auto; */
+        width:50%;
+    }
+}

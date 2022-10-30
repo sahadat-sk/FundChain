@@ -1,4 +1,18 @@
-.main-heading{
-    font-size: 5em;
-    color:red;
+.landingpage{
+    display:flex;
+}
+.main-heading1{
+    font-size: 100px;
+    color:#FF9393;
+}
+
+.main-heading-wrapper{
+    font-size: 100px;
+    margin: 0px 516px 0px 97px;
+    color:white;
+}
+
+.main-img{
+    border-image: 12px solid black;
+    margin:1px 100px 100px 100px;
 }
