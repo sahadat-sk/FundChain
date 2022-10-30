@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
+import "./Navbar.css"
 import useEth from '../../contexts/EthContext/useEth';
 
 const Navbar = () => {
