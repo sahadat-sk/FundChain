@@ -16,7 +16,7 @@ function App() {
                     <Route path="/" element={<LandingPage />} />
                     <Route path="/ongoing" element={<OngoingPage/>} />
                     <Route path="/createfund" element={<CreateFundPage/>} />
-                    <Route path="/desc" element={<Description/>}/>
+                    <Route path="/desc/:id" element={<Description/>}/>
                 </Routes>
             </BrowserRouter>
         </EthProvider>

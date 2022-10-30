@@ -15,20 +15,20 @@ const OngoingPage = () => {
                     .call();
                 let fundsArr = [];
                 for (let i = 0; i < num; i++) {
-                   let temp = await state.contract.methods.charities(i).call();
-                   console.log("temp is ",temp);
+                    let temp = await state.contract.methods.charities(i).call();
+                    //    console.log("temp is ",temp);
+                    temp.number = i;
                     fundsArr.push(temp);
                 }
 
                 setFunds(fundsArr);
-                
+
                 // console.log(funds);
                 // console.log(temp);
             }
         };
         fundArrFiller();
         console.log(funds);
-
     }, [state.contract]);
 
     // amountCollected: "0"
@@ -42,10 +42,12 @@ const OngoingPage = () => {
     return (
         <>
             <h2 className="heading">Ongoing funds</h2>
-            { funds?.map((fund) => {
+            {funds?.map((fund) => {
                 return (
                     <Fund
-                        amountCollected={fund.ammountCollected}
+                        key={fund.number}
+                        number={fund.number}
+                        amountCollected={fund.amountCollected}
                         charityName={fund.charityName}
                         charityOwner={fund.charityOwner}
                         description={fund.description}
@@ -55,9 +57,6 @@ const OngoingPage = () => {
                     />
                 );
             })}
-            <div className="funds-wrapper">
-                <Fund />
-            </div>
         </>
     );
 };
