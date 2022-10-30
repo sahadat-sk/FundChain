@@ -6,6 +6,17 @@
     outline: none;
     border-radius: 1rem;
     margin: auto;
+    text-indent: 1rem;
+  }
+
+  input 
+  ::-webkit-input-placeholder {
+    vertical-align: text-top;
+    font-size:12rem ;
+  }
+  :-moz-placeholder {
+    text-align: center;
+    font-size:12rem ;
   }
 
   @media only screen and (max-width:998px){
