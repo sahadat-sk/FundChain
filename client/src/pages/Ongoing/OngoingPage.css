@@ -16,7 +16,8 @@ margin: 25px auto 51px 34px;
 
 .funds-wrapper{
     margin: 25px auto 51px 34px;
-
+    display: flex;
+    gap: 2em;
 }
 
 .progess-text{

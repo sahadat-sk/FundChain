@@ -1,0 +1,18 @@
+.progess-text{
+    font-size: 2rem;
+    color: white;
+}
+.fund-heading{
+    font-size: 3rem;
+    color:whitesmoke;
+}
+.fund{
+    height: 30em;
+    width: 60em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+    border: 1px solid white;
+    border-radius: 20px;
+}

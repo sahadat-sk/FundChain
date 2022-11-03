@@ -16,7 +16,7 @@ const Fund = ({ number,amountCollected,charityName,charityOwner,description,isOp
         <div className="fund">
             <div className="fund-address-wrapper">
                 <div className="fund-heading">{charityName}</div>
-                <div className="fund-address">{charityOwner}</div>
+                {/* <div className="fund-address">{charityOwner}</div> */}
             </div>
             <div className="progess">
                 <div className="progess-text">Progress: {amountCollected?amountCollected:0}/{requiredAmount};</div>
