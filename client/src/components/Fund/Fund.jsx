@@ -22,9 +22,11 @@ const Fund = ({ number,amountCollected,charityName,charityOwner,description,isOp
                 <div className="progess-text">Progress: {amountCollected?amountCollected:0}/{requiredAmount};</div>
                 <div className="progress-bar"></div>
             </div>
+
             <Link to={LINK_URL}>
                 <button className="fund-donate">Donate to {number}</button>
             </Link>
+          
         </div>
     );
 };

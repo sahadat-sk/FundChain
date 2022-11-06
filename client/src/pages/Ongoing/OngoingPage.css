@@ -14,12 +14,64 @@ margin: 25px auto 51px 34px;
     }
 }
 
-.funds-wrapper{
-    margin: 25px auto 51px 34px;
-    display: flex;
-    gap: 2em;
+.fund-address-wrapper{
+    margin:auto;
 }
 
-.progess-text{
-    font-size:12rem;
+
+@media(max-width:473px){
+    .heading{
+        font-size: 4rem;
+
+    }
 }
+
+.funds-wrapper{
+
+    margin: 0px 30px 34px;
+    background: rgba(255, 255, 255, 0.199);
+    border-radius: 2rem;
+    width:72rem;
+
+}
+
+@media(max-width:558px){
+    .funds-wrapper{
+    margin: 0px 30px 34px;
+    }
+}
+
+@media(max-width:988px){
+    .funds-wrapper{
+    margin: 0px auto 34px;
+    }
+
+}
+/* .fund-heading{
+    padding:1rem 1rem 1rem 1rem;
+} */
+
+/* .fund-address-wrapper{
+    padding:1rem 1rem 1rem 1rem;
+} */
+
+.progess-text{
+    margin:auto;
+    font-size:5rem;
+    padding:0px 0px 21px 0px;
+}
+
+.progess{
+    margin: auto;
+    padding:0px 0px 21px 0px;
+}
+
+.fund-donate{
+    margin:  inherit;
+width: 40%;
+height:10%;
+}
+
+/* .fund{
+    margin:1px 1px 1px 1px;
+} */
