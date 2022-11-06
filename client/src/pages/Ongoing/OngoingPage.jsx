@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./OngoingPage.css";
 import Fund from "../../components/Fund/Fund";
 import useEth from "../../contexts/EthContext/useEth";
+import Charity from "../../contracts/Charity.json";
 import { useState } from "react";
 
 const OngoingPage = () => {
@@ -10,25 +11,53 @@ const OngoingPage = () => {
     useEffect(() => {
         let fundArrFiller = async () => {
             if (state.contract) {
-                let num = await state.contract.methods
-                    .availableContracts()
-                    .call();
-                let fundsArr = [];
-                for (let i = 0; i < num; i++) {
-                   let temp = await state.contract.methods.charities(i).call();
-                   console.log("temp is ",temp);
-                    fundsArr.push(temp);
+                try {
+                    let num = await state.contract.methods
+                        .availableContracts()
+                        .call(); //availvable contracts.
+                    let fundsArr = [];
+                    //charityOwner = payable(_charityowner);
+                    // charityName = _charityname;
+                    // requiredAmount = _requiredamount;
+                    // description = _funddescription;
+                    // minAmount = _minamount;
+                    // tags = new string[](0);
+                    // isOpen = true;
+                    // doners = new address[](0);
+                    // amountCollected = 0;
+                    for (let i = 0; i < num; i++) {
+                        let temp = await state.contract.methods
+                            .charities(i)
+                            .call();
+                        let tempObj = {};
+                        let instance = new state.web3.eth.Contract(
+                            Charity.abi,
+                            temp
+                        );
+                        tempObj.number = i;
+                        tempObj.charityName = await instance.methods
+                            .charityName()
+                            .call();
+                        tempObj.requiredAmount = await instance.methods
+                            .requiredAmount()
+                            .call();
+                        tempObj.amountCollected = await instance.methods
+                            .amountCollected()
+                            .call();
+
+                        fundsArr.push(tempObj);
+                    }
+                    setFunds(fundsArr);
+                } catch (err) {
+                    console.error(err);
                 }
 
-                setFunds(fundsArr);
-                
                 // console.log(funds);
                 // console.log(temp);
             }
         };
         fundArrFiller();
         console.log(funds);
-
     }, [state.contract]);
 
     // amountCollected: "0"
@@ -42,21 +71,18 @@ const OngoingPage = () => {
     return (
         <>
             <h2 className="heading">Ongoing funds</h2>
-            { funds?.map((fund) => {
-                return (
-                    <Fund
-                        amountCollected={fund.ammountCollected}
-                        charityName={fund.charityName}
-                        charityOwner={fund.charityOwner}
-                        description={fund.description}
-                        isOpen={fund.isOpen}
-                        minAmount={fund.minAmount}
-                        requiredAmount={fund.requiredAmount}
-                    />
-                );
-            })}
             <div className="funds-wrapper">
-                <Fund />
+                {funds?.map((fund) => {
+                    return (
+                        <Fund
+                            key={fund.number}
+                            number={fund.number}
+                            amountCollected={fund.amountCollected}
+                            charityName={fund.charityName}
+                            requiredAmount={fund.requiredAmount}
+                        />
+                    );
+                })}
             </div>
         </>
     );

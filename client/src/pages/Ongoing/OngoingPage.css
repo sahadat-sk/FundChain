@@ -27,6 +27,7 @@ margin: 25px auto 51px 34px;
 }
 
 .funds-wrapper{
+
     margin: 0px 30px 34px;
     background: rgba(255, 255, 255, 0.199);
     border-radius: 2rem;
@@ -44,6 +45,7 @@ margin: 25px auto 51px 34px;
     .funds-wrapper{
     margin: 0px auto 34px;
     }
+
 }
 /* .fund-heading{
     padding:1rem 1rem 1rem 1rem;
