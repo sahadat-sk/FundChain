@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
-// import "./importer.sol";
 
 contract Charity{
     address payable public charityOwner;
@@ -12,6 +11,7 @@ contract Charity{
     uint256 public amountCollected;
     bool public isOpen;
     address[] public doners;
+    mapping (address => bool) hasDonated; // To check if the sameperson has donated before
     constructor (address _charityowner, string memory _charityname, uint256 _requiredamount, string memory _funddescription, uint256 _minamount)  {
         charityOwner = payable(_charityowner);
         charityName = _charityname;
@@ -39,7 +39,11 @@ contract Charity{
             isOpen=false;
             charityOwner.transfer(address(this).balance);
         }
-        doners.push(msg.sender);
+        if (!hasDonated[msg.sender])
+        {
+            doners.push(msg.sender);
+        }
+        hasDonated[msg.sender]=true;
     }
      function addTags(string[] memory _s) public {
         for (uint i=0;i<_s.length;i++)
