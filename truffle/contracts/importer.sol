@@ -62,5 +62,9 @@ contract Charity{
     function getDoners() public view returns (address[] memory) {
         return doners;
     }
+    function getCollectionPercentage() public view returns(uint){
+        return ((amountCollected*100)/requiredAmount);
+    }
+    
 
 }
