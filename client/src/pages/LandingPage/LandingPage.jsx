@@ -1,28 +1,35 @@
 import React from "react";
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar/Navbar";
 
 const LandingPage = () => {
     return (
         <>
-            <section className="landingpage">
+            <section className="landingpage" style={{
+                background:`url("/backround.png")`,
+                backgroundSize:"cover",
+                backgroundRepeat:"no-repeat",
+                height:"100vh",
+            }}>
+                <Navbar path="/logo.svg"></Navbar>
                 <div className="main-heading-wrapper">
-                    <div className="main-heading">Your</div>
-                    <div className="main-heading1">Support</div>
-                    <div className="main-heading">is Powerful</div>
+                    <span className="main-heading">Your</span>
+                    <span className="main-heading1"> Support</span>
+                    <span className="main-heading"> Matters</span>
                 </div>
-                    
-                
-                <img src="/heropic.png" alt="children" className="main-img" />
+
+                <div className="buttons-wrapper">
+                    <Link to="/ongoing">
+                        <button className="donate-btn">Ongoing Funds</button>
+                    </Link>
+                    <Link to="/createfund">
+                        <button className="create-own-fund-btn">
+                            Create Your Own Fund
+                        </button>
+                    </Link>
+                </div>
             </section>
-            <div className="buttons-wrapper">
-                        <Link to="/ongoing">
-                            <button className="donate-btn">Donate</button>
-                        </Link>
-                        <Link to="/createfund">
-                            <button className="create-own-fund-btn">Create fund</button>
-                        </Link>
-                    </div>
         </>
     );
 };

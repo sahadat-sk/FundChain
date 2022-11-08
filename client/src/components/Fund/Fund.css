@@ -1,11 +1,18 @@
 
 .progess-text{
     font-size: 2rem;
-    color: white;
+    color: black;
 }
 .fund-heading{
     font-size: 3rem;
-    color:whitesmoke;
+    color:black;
+}
+.progress-bar{
+    border: 1px solid black;
+}
+.fund-donate{
+    height: 2em;
+    
 }
 .fund{
     height: 30em;
@@ -14,6 +21,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 2em;
+    background-color: white;
     border: 1px solid white;
     border-radius: 20px;
 

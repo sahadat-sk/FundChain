@@ -20,11 +20,16 @@ const Fund = ({ number,amountCollected,charityName,charityOwner,description,isOp
             </div>
             <div className="progess">
                 <div className="progess-text">Progress: {amountCollected?amountCollected:0}/{requiredAmount};</div>
-                <div className="progress-bar"></div>
+                <div className="progress-bar">
+                    <div className="progress" style={{
+                        width:`{amountCollected}/{requiredAmount}%`,
+                        bakcgroundColor:"green"
+                    }}></div>
+                </div>
             </div>
 
             <Link to={LINK_URL}>
-                <button className="fund-donate">Donate to {number}</button>
+                <button className="fund-donate">Donate</button>
             </Link>
           
         </div>

@@ -127,13 +127,7 @@ margin-bottom: auto; */
     border-radius: 16rem;
 }
 
-.donate-btn {
-    height: 4rem;
-    width: 14rem;
-    margin: auto;
-    margin-top: auto;
-    margin-top: 3rem;
-}
+
 
 @media (max-width: 998px) {
     .donate-btn {

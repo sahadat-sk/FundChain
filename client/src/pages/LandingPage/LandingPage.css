@@ -1,18 +1,51 @@
-.landingpage{
-    display:flex;
-}
+
 .main-heading1{
-    font-size: 100px;
     color:#FF9393;
 }
 
 .main-heading-wrapper{
-    font-size: 100px;
-    margin: 0px 516px 0px 97px;
+    font-size: 6.25rem;
+    width: 100vw;
+    text-align: center  ;
     color:white;
 }
-
-.main-img{
-    border-image: 12px solid black;
-    margin:1px 100px 100px 100px;
+.buttons-wrapper{
+    margin-top: 60vh;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
 }
+.donate-btn{
+    width: fit-content;
+    height: 2.5em;
+    background-color: #FBA6A6;
+    outline:none;
+    border: none;
+    padding: .5em;
+    font-size:2rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.donate-btn:hover{
+    background-color: #d58989
+}
+.create-own-fund-btn{
+    width: fit-content;
+    height: 2.5em;
+    background-color: transparent;
+    border: .2em solid #FBA6A6;
+    outline:none;
+    padding: .5em;
+    font-size:2rem;
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 10px;
+}
+.create-own-fund-btn:hover{
+    background-color: #FBA6A6;
+    color: black;
+}
+

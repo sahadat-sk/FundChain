@@ -4,6 +4,7 @@ import Fund from "../../components/Fund/Fund";
 import useEth from "../../contexts/EthContext/useEth";
 import Charity from "../../contracts/Charity.json";
 import { useState } from "react";
+import Navbar from "../../components/Navbar/Navbar";
 
 const OngoingPage = () => {
     const { state } = useEth();
@@ -69,7 +70,15 @@ const OngoingPage = () => {
     // requiredAmount: "100"
 
     return (
-        <>
+        <section
+            style={{
+                background: `#FDE3E3`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                height: "100vh",
+            }}
+        >
+            <Navbar path="/logodark.svg"></Navbar>
             <h2 className="heading">Ongoing funds</h2>
             <div className="funds-wrapper">
                 {funds?.map((fund) => {
@@ -84,7 +93,7 @@ const OngoingPage = () => {
                     );
                 })}
             </div>
-        </>
+        </section>
     );
 };
 

@@ -1,13 +1,14 @@
 .logo{
     padding: 13px 0px 13px 9px;padding: 13px 0px 13px 9px;
     width: auto;
-    height: 32px;
+    height: 5rem;
     
     /* margin: 10px 0px 17px 66px; */
     margin :auto;
       
       
 }
+
 
 
 @media(max-width:998px){

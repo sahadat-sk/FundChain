@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import "./CreateFundPage.css";
 import useEth from "../../contexts/EthContext/useEth";
+import Navbar from "../../components/Navbar/Navbar";
 
 const CreateFundPage = () => {
     const [charityName, setCharityName] = useState("");
@@ -52,69 +53,86 @@ const CreateFundPage = () => {
     };
 
     return (
-        <>
-            <h1 className="create-fund-heading">Create Your Own Fund</h1>
-            <div className="full-form">
-                <form className="form-fields">
-                    <label className="charity-label">
-                        Charity Name:
-                        <input
-                            type="text"
-                            className="box"
-                            value={charityName}
-                            onChange={(e) => setCharityName(e.target.value)}
-                        />
-                    </label>
-                    <label className="charity-label">
-                        Owner Address:
-                        <input
-                            type="text"
-                            className="box"
-                            value={ownerAddress}
-                            onChange={(e) => setOwnerAddress(e.target.value)}
-                        />
-                    </label>
-                    <label className="charity-label">
-                        Amount Required:
-                        <input
-                            type="text"
-                            className="box"
-                            value={amountRequired}
-                            onChange={(e) => setAmountRequired(e.target.value)}
-                        />
-                    </label>
-                    <label className="charity-label">
-                        Min amount to donate:
-                        <input
-                            type="text"
-                            className="box"
-                            value={minAmountToDonate}
-                            onChange={(e) =>
-                                setMinAmountToDonate(e.target.value)
-                            }
-                        />
-                    </label>
-                    <label className="charity-label">
-                        Description:
-                        <input
-                            type="text"
-                            className="box"
-                            id="desc-box"
-                            style={{ height: "27rem", width: "91rem" }}
-                            value={discription}
-                            onChange={(e) => setDiscription(e.target.value)}
-                        />
-                    </label>
-                </form>
-                {!isLoading ? (
-                    <button className="create-fund-btn" onClick={handleSubmit}>
-                        Create
-                    </button>
-                ) : (
-                    <p className="loading">Loading...</p>
-                )}
+        <section
+            style={{
+                background: `#FDE3E3`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                height: "100vh",
+            }}
+        >
+            <Navbar path="logodark.svg" />
+            <div className="form-container">
+                <h1 className="create-fund-heading">Create Your Own Fund</h1>
+                <div className="full-form">
+                    <form className="form-fields">
+                        <label className="charity-label">
+                            Charity Name:
+                            <input
+                                type="text"
+                                className="box"
+                                value={charityName}
+                                onChange={(e) => setCharityName(e.target.value)}
+                            />
+                        </label>
+                        <label className="charity-label">
+                            Owner Address:
+                            <input
+                                type="text"
+                                className="box"
+                                value={ownerAddress}
+                                onChange={(e) =>
+                                    setOwnerAddress(e.target.value)
+                                }
+                            />
+                        </label>
+                        <label className="charity-label">
+                            Amount Required:
+                            <input
+                                type="text"
+                                className="box"
+                                value={amountRequired}
+                                onChange={(e) =>
+                                    setAmountRequired(e.target.value)
+                                }
+                            />
+                        </label>
+                        <label className="charity-label">
+                            Min amount to donate:
+                            <input
+                                type="text"
+                                className="box"
+                                value={minAmountToDonate}
+                                onChange={(e) =>
+                                    setMinAmountToDonate(e.target.value)
+                                }
+                            />
+                        </label>
+                        <label className="charity-label">
+                            Description:
+                            <input
+                                type="text"
+                                className="box"
+                                id="desc-box"
+                                style={{ height: "27rem", width: "91rem" }}
+                                value={discription}
+                                onChange={(e) => setDiscription(e.target.value)}
+                            />
+                        </label>
+                    </form>
+                    {!isLoading ? (
+                        <button
+                            className="create-fund-btn"
+                            onClick={handleSubmit}
+                        >
+                            Create
+                        </button>
+                    ) : (
+                        <h1 className="loading">Loading...</h1>
+                    )}
+                </div>
             </div>
-        </>
+        </section>
     );
 };
 

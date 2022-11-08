@@ -4,9 +4,10 @@ import { useEffect } from 'react';
 import "./Navbar.css"
 import useEth from '../../contexts/EthContext/useEth';
 
-const Navbar = () => {
+const Navbar = ({path}) => {
   const [address,setAddress] = useState("none");
   const {state} = useEth();
+  console.log(path);
   useEffect(() => {
     let curraddress = "none";
     if(state.accounts) curraddress =  state.accounts[0];
@@ -16,8 +17,7 @@ const Navbar = () => {
   
   return (
       <nav className="navbar">
-          <img src="/logo.png" alt="eth-raiser" className="logo" />
-          <div className="account">{address}</div>
+          <img src={path} alt="eth-raiser" className="logo" />
       </nav>
   );
 }

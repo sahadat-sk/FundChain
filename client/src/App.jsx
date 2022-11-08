@@ -11,7 +11,7 @@ function App() {
     return (
         <EthProvider>
             <BrowserRouter>
-                <Navbar />
+                {/* <Navbar /> */}
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
                     <Route path="/ongoing" element={<OngoingPage/>} />

@@ -1,97 +1,88 @@
-.create-fund-heading{
-    font-size: 6rem;
-    color: white;
-margin: 25px auto 51px 34px;
-
+.form-container {
+    height: 85vh;
+    width: 80vw;
+    background-color: whitesmoke;
+    margin-left: 10vw;
+    border-radius: 20px;
+    margin-top: auto;
 }
 
+.create-fund-heading {
+    font-size: 4rem;
+    color: black;
+    margin: 25px auto 51px 34px;
+}
 .form-fields{
     display: flex;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-    width: 99rem;
-    height: 63rem;
-    margin: 1px 0px 43px 35px;
-    /* box-shadow: 3rem 3rem black; */
+    flex-wrap: wrap ;
+    justify-content: center;
+    align-items: center;
+    
 }
-
-
-@media (max-width:558px){
-    .form-fields{
+@media (max-width: 558px) {
+    .form-fields {
         margin: 0px auto 0px auto;
         width: 38%;
-
     }
 }
-@media (max-width:988px){
-    .form-fields{
+@media (max-width: 988px) {
+    .form-fields {
         /* background-color: aquamarine; */
         margin: 0px auto 0px auto;
         width: 38%;
         /* box-shadow: 3rem 3rem #B0B0B0; */
-      
-        
-
     }
 }
 
-
-.charity-label{
-    font-size: 3rem;
-  display: flex;
-  flex-direction: column;
-  padding: 11px 0px 39px 0px;
-  
-
+.charity-label {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 11px 0px 39px 0px;
 }
 
-.box{
+.box {
     background-image: trans;
 }
 
-input{
+input {
     background: rgba(255, 255, 255, 0.199);
-border: none;
-border-radius: 1rem;
-height: 5rem;
-width: 42rem;
-margin: auto 65px auto auto;
-
-box-shadow: 0.5rem 0.5rem #00000021;
-
-  
-}
-
-#desc{
-    height:12rem;
-    width:12rem;
-}
-
-.create-fund-btn{
-    font-size: 2.5rem;
-    padding: 2rem 4rem 2rem 3rem;
     border: none;
     border-radius: 1rem;
-    background-color: #FEE68F;
-    margin: auto auto 5rem auto;
-  
-
+    height: 4rem;
+    width: 35vw;
+    margin: .1em 1em 0 0;
+    border: 2px solid grey;
+   padding-left:1em;
 }
 
-.create-fund-btn:hover{
-    font-size: 2.5rem;
-    padding: 2rem 4rem 2rem 3rem;
+#desc {
+    height: 12rem;
+    width: 12rem;
+}
+
+.create-fund-btn {
+    font-size: 2.2rem;
+    padding:.5em;
+    width: 5em;
+    border: none;
+    border-radius: 1rem;
+    background-color: #fee68f;
+    transition: all 200ms ease;
+}
+
+.create-fund-btn:hover {
+    font-size: 2.2rem;
+    padding:.5em;
     border: none;
     border-radius: 1rem;
     background-color: #006876;
-    margin: auto auto 5rem auto;
-    color:white;
-  
-
+    color: white;
 }
 
-
-.full-form{
-    display:flex;
-
+.full-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

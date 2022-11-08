@@ -1,6 +1,6 @@
 .heading{
-    font-size: 6rem;
-    color: white;
+    font-size: 5rem;
+    color: black;
 margin: 25px auto 51px 34px;
 }
 
@@ -27,12 +27,10 @@ margin: 25px auto 51px 34px;
 }
 
 .funds-wrapper{
-
-    margin: 0px 30px 34px;
-    background: rgba(255, 255, 255, 0.199);
-    border-radius: 2rem;
-    width:72rem;
-
+width: 100vw;
+height: 40vh;
+overflow: auto;
+padding-left:5em;
 }
 
 @media(max-width:558px){
