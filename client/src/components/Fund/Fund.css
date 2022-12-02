@@ -6,6 +6,9 @@
 .fund-heading{
     font-size: 3rem;
     color:black;
+    overflow: ellipsis;
+     text-overflow: ellipsis;
+
 }
 .progress-bar{
     border: 1px solid black;
@@ -20,9 +23,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2em;
+    gap:2em;
+    padding: 3em;
     background-color: white;
     border: 1px solid white;
-    border-radius: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
+
+}
+.progress{
+    display: flex;
+    flex-direction: column;
+    gap:1em;   
+}
+.fund-donate{
+    height: 2.4em;
+    width: 8em;
+    background-color:#FEE68F;
+    transition: all 200ms ease-in-out;
+    border-radius: 5px;
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+.fund-donate:hover{
+    background-color:#006876;
+    color:white;
 }

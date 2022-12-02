@@ -1,49 +1,49 @@
-.heading{
+.heading {
     font-size: 5rem;
     color: black;
-margin: 25px auto 51px 34px;
+    margin: 25px auto 51px 34px;
 }
 
-@media(max-width:558px){
-    .heading{
-    display: flex;
-    justify-content:center;
-    margin:auto;
-    align-items: center;
-    width:50%;
+@media (max-width: 558px) {
+    .heading {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        align-items: center;
+        width: 50%;
     }
 }
 
-.fund-address-wrapper{
-    margin:auto;
+.fund-address-wrapper {
+    margin: auto;
 }
 
-
-@media(max-width:473px){
-    .heading{
+@media (max-width: 473px) {
+    .heading {
         font-size: 4rem;
-
     }
 }
 
-.funds-wrapper{
-width: 100vw;
-height: 40vh;
-overflow: auto;
-padding-left:5em;
+.funds-wrapper {
+    width: 100vw;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    overflow: auto;
+    padding-left: 5em;
 }
 
-@media(max-width:558px){
-    .funds-wrapper{
-    margin: 0px 30px 34px;
+@media (max-width: 558px) {
+    .funds-wrapper {
+        margin: 0px 30px 34px;
     }
 }
 
-@media(max-width:988px){
-    .funds-wrapper{
-    margin: 0px auto 34px;
+@media (max-width: 988px) {
+    .funds-wrapper {
+        margin: 0px auto 34px;
     }
-
 }
 /* .fund-heading{
     padding:1rem 1rem 1rem 1rem;
@@ -53,22 +53,14 @@ padding-left:5em;
     padding:1rem 1rem 1rem 1rem;
 } */
 
-.progess-text{
-    margin:auto;
-    font-size:5rem;
-    padding:0px 0px 21px 0px;
-}
-
-.progess{
+.progess-text {
     margin: auto;
-    padding:0px 0px 21px 0px;
+    font-size: 5rem;
+    padding: 0px 0px 21px 0px;
 }
 
-.fund-donate{
-    margin:  inherit;
-width: 40%;
-height:10%;
-}
+
+
 
 /* .fund{
     margin:1px 1px 1px 1px;

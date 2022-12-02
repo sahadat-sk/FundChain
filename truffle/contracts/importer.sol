@@ -11,7 +11,8 @@ contract Charity{
     uint256 public amountCollected;
     bool public isOpen;
     address[] public doners;
-    mapping (address => bool) hasDonated; // To check if the sameperson has donated before
+    // uint256 public cnt;
+    mapping (address => bool) hasDonated; // To check if the same person has donated before
     constructor (address _charityowner, string memory _charityname, uint256 _requiredamount, string memory _funddescription, uint256 _minamount)  {
         charityOwner = payable(_charityowner);
         charityName = _charityname;
@@ -22,8 +23,11 @@ contract Charity{
         isOpen = true;
         doners = new address[](0);
         amountCollected = 0;
+        // cnt = 0;
     }
-  
+    // event Donors(
+    //     address[] pastdonors
+    // );
     function pay() external payable {
         if (msg.value<minAmount)
         {
@@ -39,11 +43,13 @@ contract Charity{
             isOpen=false;
             charityOwner.transfer(address(this).balance);
         }
-        if (!hasDonated[msg.sender])
+        if (hasDonated[msg.sender] == false)
         {
             doners.push(msg.sender);
         }
         hasDonated[msg.sender]=true;
+
+        // emit Donors(doners);
     }
      function addTags(string[] memory _s) public {
         for (uint i=0;i<_s.length;i++)
@@ -59,8 +65,10 @@ contract Charity{
         charityOwner.transfer(address(this).balance);
         isOpen=false;
     }
-    function getDoners() public view returns (address[] memory) {
-        return doners;
+
+    function getDoners() public view returns (uint256) {
+        uint256 x = doners.length;
+        return (x*100);
     }
     function getCollectionPercentage() public view returns(uint256){
         return ((amountCollected*100)/requiredAmount);

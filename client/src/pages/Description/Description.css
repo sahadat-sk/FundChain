@@ -1,12 +1,14 @@
-.charity-desc {
-    height: 41rem;
-    width: 60rem;
-    background: rgba(255, 255, 255, 0.199);
+.desc {
+    height: 30rem;
+    width: 90%;
+   background-color: rgb(242, 242, 242);
     border: none;
     outline: none;
     border-radius: 1rem;
-    margin: auto;
+    margin-left: 1em;
+    font-size: 3.4em;
     text-indent: 1rem;
+    padding:1em;
 }
 
 input ::-webkit-input-placeholder {
@@ -42,15 +44,14 @@ input ::-webkit-input-placeholder {
 }
 
 .desc-heading {
-    color: white;
-    margin: auto;
-    margin-left: auto;
-    font-size: 4rem;
+    margin-top: 1em;  
+    margin-bottom:1em;  
+    font-size: 5rem;
     margin-left: 4rem;
 }
 .main {
     display: flex;
-    flex-wrap: wrap-reverse;
+    
 }
 
 .donation {
@@ -58,15 +59,13 @@ input ::-webkit-input-placeholder {
     flex-direction: column;
 }
 .div2 {
-    margin-left: auto;
-    margin-right: auto;
-    /* margin-top: auto;
-  margin-bottom: auto;
-margin-bottom: auto; */
-    height: 0rem;
-    width: 31rem;
-    margin-bottom: 35rem;
-    margin-top: 17rem;
+   padding-left:5em;
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin-top:10em;
+    gap: 4em;
 }
 
 @media (max-width: 1011px) {
@@ -89,7 +88,7 @@ margin-bottom: auto; */
 }
 
 .div1 {
-    margin: auto;
+    
     flex-direction: column;
     justify-content: center;
     align-content: center;
@@ -113,6 +112,10 @@ margin-bottom: auto; */
 .past-donors {
     margin-top: 8rem;
     font-size: 1.5rem;
+    background-color:#f2f2f2;
+    width: 90%;
+    bottom:0;
+    padding:1em;
     /* color:blue; */
 }
 
@@ -125,6 +128,10 @@ margin-bottom: auto; */
     width: 31rem;
     background-color: white;
     border-radius: 16rem;
+}
+.donor{
+    background-color: #fffdfd;
+    padding:.5em;
 }
 
 

@@ -52,7 +52,12 @@ const Description = () => {
                     setRequiredAmount(
                         await instance.methods.requiredAmount().call()
                     );
-                    setPastDonors(await instance.methods.getDoners().call());
+                    let pastDonor = await instance.methods.getDoners().call();
+                    console.log(pastDonor);
+                    // let dCount = await instance.methods.cnt().call();
+                    //console.log(dCount);
+
+                    // setPastDonors(pastDonor);
                     setWidth((amountCollected / requiredAmount) * 100);
                     console.log((amountCollected / requiredAmount) * 100);
                     // console.log(
@@ -122,14 +127,12 @@ const Description = () => {
                         onChange={(e) => {
                             setAmount(e.target.value);
                         }}
+                        placeholder= {"Min amount to donate is " + minAmount}
                     />
                 </form>
-                <button className="donate-btn" onClick={handleDonate}>
+                <button className="fund-donate" onClick={handleDonate}>
                     Donate
                 </button>
-                <div className="min-amount">
-                    Min amount to donate is {minAmount}
-                </div>
                 <div className="past-donors">
                     <h1>Past Donors:</h1>
                     {pastDonors?.map((pastDonor) => {
