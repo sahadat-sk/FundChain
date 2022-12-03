@@ -74,14 +74,12 @@ const OngoingPage = () => {
     return (
         <section
             style={{
-                background: `#FDE3E3`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 height: "100vh",
             }}
         >
-            <Navbar path="/logodark.svg"></Navbar>
-            <h2 className="heading">Ongoing funds</h2>
+            <h2 className="heading">My Charities</h2>
             <div className="funds-wrapper">
                 {funds?.map((fund) => {
                     return (

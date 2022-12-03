@@ -13,18 +13,17 @@ function App() {
         <EthProvider>
             <BrowserRouter>
                 {/* <Navbar /> */}
+                <Navbar path="/logodark.svg"></Navbar>
+
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
-                    <Route path="/ongoing" element={<OngoingPage/>} />
-                    <Route path="/createfund" element={<CreateFundPage/>} />
-                    <Route path="/desc/:id" element={<Description/>}/>
-                    <Route path="/mycharities" element={<MyCharites/>}/>
+                    <Route path="/ongoing" element={<OngoingPage />} />
+                    <Route path="/createfund" element={<CreateFundPage />} />
+                    <Route path="/desc/:id" element={<Description />} />
+                    <Route path="/mycharities" element={<MyCharites />} />
                 </Routes>
             </BrowserRouter>
         </EthProvider>
-
-        
-                
     );
 }
 

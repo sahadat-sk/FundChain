@@ -77,21 +77,25 @@ const OngoingPage = () => {
     return (
         <section
             style={{
-                background: `#FDE3E3`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
-                height: "100vh",
+                height:"100vh",
+                width:"100vw"
             }}
         >
-            <Navbar path="/logodark.svg"></Navbar>
             <h2 className="heading">Ongoing funds</h2>
-            <button className="donate-btn" onClick={() => setShowAll(true)}>
-                {" "}
-                Show All Charities
-            </button>
-            <button className="donate-btn" onClick={() => setShowAll(false)}>
-                Show Running Charities
-            </button>
+            <div className="all-running-btn-wrapper">
+                <button className="donate-btn" onClick={() => setShowAll(true)}>
+                    Show All Charities
+                </button>
+                <button
+                    className="donate-btn"
+                    onClick={() => setShowAll(false)}
+                >
+                    Show Running Charities
+                </button>
+            </div>
+
             {showAll ? (
                 <div className="funds-wrapper">
                     {funds?.map((fund) => {
@@ -109,15 +113,15 @@ const OngoingPage = () => {
             ) : (
                 <div className="funds-wrapper">
                     {funds?.map((fund) => {
-                        return (
-                            fund.isOpen?<Fund
+                        return fund.isOpen ? (
+                            <Fund
                                 key={fund.number}
                                 number={fund.number}
                                 amountCollected={fund.amountCollected}
                                 charityName={fund.charityName}
                                 requiredAmount={fund.requiredAmount}
-                            />:null
-                        );
+                            />
+                        ) : null;
                     })}
                 </div>
             )}

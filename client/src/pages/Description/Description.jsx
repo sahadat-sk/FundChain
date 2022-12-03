@@ -123,6 +123,7 @@ const Description = () => {
                     <input
                         type="text"
                         value={amount}
+                        placeholder= {"Minimum amount to donate is "+minAmount}
                         onChange={(e) => {
                             setAmount(e.target.value);
                         }}
@@ -131,9 +132,7 @@ const Description = () => {
                 <button className="donate-btn" onClick={handleDonate}>
                     Donate
                 </button>
-                <div className="min-amount">
-                    Min amount to donate is {minAmount}
-                </div>
+                
                 <div className="past-donors">
                     <h1>Past Donors:</h1>
                     {pastDonors?.map((pastDonor) => {

@@ -4,50 +4,48 @@
 .main-heading1{
     color:#FF9393;
 }
+.heading-button-wrapper{
+    position: absolute;
+    flex-direction: column;
+    gap:5rem;
+    align-items: left;
+    justify-content: center;
+    display: flex;
+    left:10%;
+    width: 30vw;
+    /* width: 50vw; */
+    top:30%;
+}
 
 .main-heading-wrapper{
     font-size: 6.25rem;
-    width: 100vw;
     text-align: center  ;
     color:white;
 }
 .buttons-wrapper{
-    margin-top: 60vh;
     position: relative;
-    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10em;
 }
-.donate-btn{
-    width: fit-content;
-    height: 2.5em;
-    background-color: #FBA6A6;
-    outline:none;
-    border: none;
-    padding: .5em;
-    font-size:2rem;
-    border-radius: 10px;
-    font-weight: bold;
-}
-.donate-btn:hover{
-    background-color: #d58989
-}
+
 .create-own-fund-btn{
     width: fit-content;
     height: 2.5em;
     background-color: transparent;
-    border: .2em solid #FBA6A6;
+    border: .1em solid #FBA6A6;
     outline:none;
-    padding: .5em;
+    padding: .5em 2em .5em 2em;
     font-size:2rem;
     color:rgb(0, 0, 0);
     font-weight: bold;
     border-radius: 10px;
+    transition: color 200ms ease;
+    cursor: pointer;
 }
 .create-own-fund-btn:hover{
     background-color: #FBA6A6;
-    color: black;
+    color: white;
 }
 

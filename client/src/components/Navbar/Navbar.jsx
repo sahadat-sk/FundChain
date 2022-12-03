@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import "./Navbar.css"
 import useEth from '../../contexts/EthContext/useEth';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({path}) => {
   const [address,setAddress] = useState("none");
@@ -17,6 +18,17 @@ const Navbar = ({path}) => {
   return (
       <nav className="navbar">
           <img src={path} alt="eth-raiser" className="logo" />
+          <ul className='navList'>
+              <li>
+                  <Link to="/">Home</Link>
+              </li>
+              <li>
+                  <Link to="/mycharities">My Charities</Link>
+              </li>
+              <li>
+                  <Link to="/createfund">Create Charity</Link>
+              </li>
+          </ul>
       </nav>
   );
 }

@@ -11,27 +11,35 @@ const Fund = ({ number,amountCollected,charityName,charityOwner,description,isOp
     // minAmount: "10"
     // requiredAmount: "100"
     const LINK_URL = "/desc/"+number;
+    console.log((amountCollected / requiredAmount) * 100);
 
     return (
         <div className="fund">
-            <div className="fund-address-wrapper">
-                <div className="fund-heading">{charityName}</div>
-                {/* <div className="fund-address">{charityOwner}</div> */}
-            </div>
+            <div className="fund-heading">{charityName}</div>
+
             <div className="progess">
-                <div className="progess-text">Progress: {amountCollected?amountCollected:0}/{requiredAmount};</div>
+                <div className="progess-text">
+                    Progress: {amountCollected ? amountCollected : 0}/
+                    {requiredAmount};
+                </div>
                 <div className="progress-bar">
-                    <div className="progress" style={{
-                        width:`{amountCollected}/{requiredAmount}%`,
-                        bakcgroundColor:"green"
-                    }}></div>
+                    <div
+                        className="progress"
+                        style={{
+                            width: `${
+                                (amountCollected / requiredAmount) * 100
+                            }%`,
+                            backgroundColor: "#54F754",
+                            height: "100%",
+                            borderRadius:"16rem"
+                        }}
+                    ></div>
                 </div>
             </div>
 
             <Link to={LINK_URL}>
                 <button className="fund-donate">Donate</button>
             </Link>
-          
         </div>
     );
 };

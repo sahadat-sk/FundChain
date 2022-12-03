@@ -3,6 +3,8 @@ import { useState } from "react";
 import "./CreateFundPage.css";
 import useEth from "../../contexts/EthContext/useEth";
 import Navbar from "../../components/Navbar/Navbar";
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CreateFundPage = () => {
     const [charityName, setCharityName] = useState("");
@@ -12,6 +14,7 @@ const CreateFundPage = () => {
     const [discription, setDiscription] = useState("");
     const { state } = useEth();
     const [isLoading, setIsLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         setIsLoading(true);
@@ -41,6 +44,7 @@ const CreateFundPage = () => {
                     minAmountToDonate
                 )
                 .send({ from: state.accounts[0] });
+            navigate("/");
         } catch (err) {
             console.error(err);
         }
@@ -55,13 +59,14 @@ const CreateFundPage = () => {
     return (
         <section
             style={{
-                background: `#FDE3E3`,
+                marginTop: 0,
+                
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
-                height: "100vh",
+                height:"100vh",
+                width:"100vw"
             }}
         >
-            <Navbar path="logodark.svg" />
             <div className="form-container">
                 <h1 className="create-fund-heading">Create Your Own Fund</h1>
                 <div className="full-form">

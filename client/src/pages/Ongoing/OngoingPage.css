@@ -1,9 +1,32 @@
 .heading {
-    font-size: 5rem;
+    font-size: 4rem;
     color: black;
     margin: 25px auto 51px 34px;
+    margin-top: 8rem;
+    padding-left: 2rem;
 }
-
+.donate-btn{
+    width: fit-content;
+    background-color: #FBA6A6;
+    outline:none;
+    padding: 1rem 2rem 1rem 2rem;
+    font-size:1.6rem;
+    border-radius: 5px;
+    font-weight: bold;
+    border:none;
+    border-bottom: 1px solid #FBA6A6;
+    background-color: transparent;
+    transition: all 200ms ease;
+}
+.donate-btn:hover{
+    background-color: #F75454;
+    color:white;
+}
+.all-running-btn-wrapper{
+    margin-left: 5rem;
+    display: flex;
+    gap: 2rem;
+}
 @media (max-width: 558px) {
     .heading {
         display: flex;
@@ -31,7 +54,8 @@
     flex-wrap: wrap;
     gap: 2em;
     overflow: auto;
-    padding-left: 5em;
+    padding-top:2rem;
+    padding-left: 5rem;
 }
 
 @media (max-width: 558px) {

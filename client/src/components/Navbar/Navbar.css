@@ -3,13 +3,38 @@
     width: auto;
     height: 5rem;
     
-    /* margin: 10px 0px 17px 66px; */
-    margin :auto;
+ 
       
       
 }
+.navList{
+    display: flex;
+    font-size: 2rem;
+    gap:2rem;
 
-
+}
+.navbar{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2em;
+    padding-right: 10em;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: color 200ms ease;
+}
+a:hover{
+    color:#F75454;
+}
 
 @media(max-width:998px){
     .logo{

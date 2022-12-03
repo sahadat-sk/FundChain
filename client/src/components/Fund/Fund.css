@@ -25,7 +25,7 @@
     justify-content: space-between;
     gap:2em;
     padding: 3em;
-    background-color: white;
+    background-color: hsl(240, 42%, 93%);
     border: 1px solid white;
     border-radius: 10px;
     overflow: hidden;
@@ -41,7 +41,8 @@
 .fund-donate{
     height: 2.4em;
     width: 8em;
-    background-color:#FEE68F;
+    background-color:#5454F7;
+    color:white;
     transition: all 200ms ease-in-out;
     border-radius: 5px;
     border:none;
@@ -49,6 +50,6 @@
     cursor: pointer;
 }
 .fund-donate:hover{
-    background-color:#006876;
-    color:white;
+    background-color:hsl(240, 58%, 54%);
+   
 }
