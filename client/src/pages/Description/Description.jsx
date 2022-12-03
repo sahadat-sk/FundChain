@@ -31,10 +31,14 @@ const Description = () => {
                         .charities(id)
                         .call();
 
+
+
                     let instance = new state.web3.eth.Contract(
                         Charity.abi,
                         contractAddress
                     );
+                    
+                    console.log(await instance.methods.getDonors().call());
 
                     // amountCollected: "0"
                     // ​charityName: "snew"
@@ -52,12 +56,7 @@ const Description = () => {
                     setRequiredAmount(
                         await instance.methods.requiredAmount().call()
                     );
-                    let pastDonor = await instance.methods.getDoners().call();
-                    console.log(pastDonor);
-                    // let dCount = await instance.methods.cnt().call();
-                    //console.log(dCount);
-
-                    // setPastDonors(pastDonor);
+                    setPastDonors(await instance.methods.getDonors().call());
                     setWidth((amountCollected / requiredAmount) * 100);
                     console.log((amountCollected / requiredAmount) * 100);
                     // console.log(
@@ -65,7 +64,7 @@ const Description = () => {
                     // );
                     setIsLoading(false);
                 } catch (err) {
-                    console.error(err);
+                    console.error(err  );
                 }
             }
         };
@@ -127,12 +126,14 @@ const Description = () => {
                         onChange={(e) => {
                             setAmount(e.target.value);
                         }}
-                        placeholder= {"Min amount to donate is " + minAmount}
                     />
                 </form>
-                <button className="fund-donate" onClick={handleDonate}>
+                <button className="donate-btn" onClick={handleDonate}>
                     Donate
                 </button>
+                <div className="min-amount">
+                    Min amount to donate is {minAmount}
+                </div>
                 <div className="past-donors">
                     <h1>Past Donors:</h1>
                     {pastDonors?.map((pastDonor) => {

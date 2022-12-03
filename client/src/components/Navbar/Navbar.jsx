@@ -7,7 +7,6 @@ import useEth from '../../contexts/EthContext/useEth';
 const Navbar = ({path}) => {
   const [address,setAddress] = useState("none");
   const {state} = useEth();
-  console.log(path);
   useEffect(() => {
     let curraddress = "none";
     if(state.accounts) curraddress =  state.accounts[0];

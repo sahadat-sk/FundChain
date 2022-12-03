@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./OngoingPage.css";
+import "./MyCharities.css";
 import Fund from "../../components/Fund/Fund";
 import useEth from "../../contexts/EthContext/useEth";
 import Charity from "../../contracts/Charity.json";
@@ -9,8 +9,6 @@ import Navbar from "../../components/Navbar/Navbar";
 const OngoingPage = () => {
     const { state } = useEth();
     const [funds, setFunds] = useState([]);
-    const [showAll, setShowAll] = useState(false);
-
     useEffect(() => {
         let fundArrFiller = async () => {
             if (state.contract) {
@@ -50,7 +48,6 @@ const OngoingPage = () => {
                         tempObj.charityOwner = await instance.methods
                             .charityOwner()
                             .call();
-                        tempObj.isOpen = await instance.methods.isOpen().call();
 
                         fundsArr.push(tempObj);
                     }
@@ -85,42 +82,19 @@ const OngoingPage = () => {
         >
             <Navbar path="/logodark.svg"></Navbar>
             <h2 className="heading">Ongoing funds</h2>
-            <button className="donate-btn" onClick={() => setShowAll(true)}>
-                {" "}
-                Show All Charities
-            </button>
-            <button className="donate-btn" onClick={() => setShowAll(false)}>
-                Show Running Charities
-            </button>
-            {showAll ? (
-                <div className="funds-wrapper">
-                    {funds?.map((fund) => {
-                        return (
-                            <Fund
-                                key={fund.number}
-                                number={fund.number}
-                                amountCollected={fund.amountCollected}
-                                charityName={fund.charityName}
-                                requiredAmount={fund.requiredAmount}
-                            />
-                        );
-                    })}
-                </div>
-            ) : (
-                <div className="funds-wrapper">
-                    {funds?.map((fund) => {
-                        return (
-                            fund.isOpen?<Fund
-                                key={fund.number}
-                                number={fund.number}
-                                amountCollected={fund.amountCollected}
-                                charityName={fund.charityName}
-                                requiredAmount={fund.requiredAmount}
-                            />:null
-                        );
-                    })}
-                </div>
-            )}
+            <div className="funds-wrapper">
+                {funds?.map((fund) => {
+                    return (
+                        fund.charityOwner==state.accounts[0]?<Fund
+                            key={fund.number}
+                            number={fund.number}
+                            amountCollected={fund.amountCollected}
+                            charityName={fund.charityName}
+                            requiredAmount={fund.requiredAmount}
+                        />:null
+                    );
+                })}
+            </div>
         </section>
     );
 };

@@ -11,8 +11,7 @@ contract Charity{
     uint256 public amountCollected;
     bool public isOpen;
     address[] public donors;
-    uint256 public donorCount=0;
-    mapping (address => bool) hasDonated; // To check if the same person has donated before
+    mapping (address => bool) hasDonated; // To check if the sameperson has donated before
     constructor (address _charityowner, string memory _charityname, uint256 _requiredamount, string memory _funddescription, uint256 _minamount)  {
         charityOwner = payable(_charityowner);
         charityName = _charityname;
@@ -23,11 +22,8 @@ contract Charity{
         isOpen = true;
         donors = new address[](0);
         amountCollected = 0;
-        // cnt = 0;
     }
-    // event Donors(
-    //     address[] pastdonors
-    // );
+  
     function pay() external payable {
         if (msg.value<minAmount)
         {
@@ -43,14 +39,11 @@ contract Charity{
             isOpen=false;
             charityOwner.transfer(address(this).balance);
         }
-        if (hasDonated[msg.sender] == false)
+        if (!hasDonated[msg.sender])
         {
             donors.push(msg.sender);
-            donorCount++;
         }
         hasDonated[msg.sender]=true;
-
-        // emit Donors(doners);
     }
      function addTags(string[] memory _s) public {
         for (uint i=0;i<_s.length;i++)
@@ -59,17 +52,15 @@ contract Charity{
         }
     }
 
+    function getTags() public view returns (string[] memory) {
+        return tags;
+    }
       function withdraw() public payable {
         charityOwner.transfer(address(this).balance);
         isOpen=false;
     }
     function getDonors() public view returns (address[] memory) {
-       address[] memory totalDonors = new address[](donorCount);
-        for (uint i=0;i<donorCount;i++)
-        {
-            totalDonors[i]=(donors[i]);
-        }
-        return totalDonors;
+        return donors;
     }
     function getCollectionPercentage() public view returns(uint256){
         return ((amountCollected*100)/requiredAmount);
@@ -77,3 +68,4 @@ contract Charity{
     
 
 }
+

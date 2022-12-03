@@ -29,6 +29,9 @@ const LandingPage = () => {
                             Create Your Own Fund
                         </button>
                     </Link>
+                    <Link to="/mycharities">
+                        <button className="donate-btn">My Charities</button>
+                    </Link>
                 </div>
             </section>
         </>
