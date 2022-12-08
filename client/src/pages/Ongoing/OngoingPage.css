@@ -14,6 +14,7 @@
     border-radius: 5px;
     font-weight: bold;
     border:none;
+    cursor: pointer;
     border-bottom: 1px solid #FBA6A6;
     background-color: transparent;
     transition: all 200ms ease;

@@ -25,7 +25,7 @@
     justify-content: space-between;
     gap:2em;
     padding: 3em;
-    background-color: hsl(240, 42%, 93%);
+    background-color: #F0F0FE;
     border: 1px solid white;
     border-radius: 10px;
     overflow: hidden;

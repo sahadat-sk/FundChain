@@ -20,7 +20,7 @@ const Fund = ({ number,amountCollected,charityName,charityOwner,description,isOp
             <div className="progess">
                 <div className="progess-text">
                     Progress: {amountCollected ? amountCollected : 0}/
-                    {requiredAmount};
+                    {requiredAmount}
                 </div>
                 <div className="progress-bar">
                     <div

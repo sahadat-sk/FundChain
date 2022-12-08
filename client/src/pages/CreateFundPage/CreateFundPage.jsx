@@ -60,15 +60,17 @@ const CreateFundPage = () => {
         <section
             style={{
                 marginTop: 0,
-                
+
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
-                height:"100vh",
-                width:"100vw"
+                height: "100vh",
+                width: "100vw",
             }}
         >
             <div className="form-container">
-                <h1 className="create-fund-heading">Create Your Own Fund</h1>
+                <h1 className="create-fund-heading">
+                    Create Your <span className="main-heading1">Own</span> Fund
+                </h1>
                 <div className="full-form">
                     <form className="form-fields">
                         <label className="charity-label">

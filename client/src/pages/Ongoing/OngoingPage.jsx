@@ -83,7 +83,7 @@ const OngoingPage = () => {
                 width:"100vw"
             }}
         >
-            <h2 className="heading">Ongoing funds</h2>
+            <h2 className="heading">Ongoing <span className="main-heading1">Funds</span></h2>
             <div className="all-running-btn-wrapper">
                 <button className="donate-btn" onClick={() => setShowAll(true)}>
                     Show All Charities

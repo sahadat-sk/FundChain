@@ -2,7 +2,7 @@
     color:black;
 }
 .main-heading1{
-    color:#FF9393;
+    color:#F75454;
 }
 .heading-button-wrapper{
     position: absolute;
@@ -34,18 +34,18 @@
     width: fit-content;
     height: 2.5em;
     background-color: transparent;
-    border: .1em solid #FBA6A6;
+    border: .1em solid #F75454;
     outline:none;
     padding: .5em 2em .5em 2em;
     font-size:2rem;
     color:rgb(0, 0, 0);
     font-weight: bold;
     border-radius: 10px;
-    transition: color 200ms ease;
+    transition: all 200ms ease;
     cursor: pointer;
 }
 .create-own-fund-btn:hover{
-    background-color: #FBA6A6;
+    background-color: #F75454;
     color: white;
 }
 
