@@ -54,19 +54,12 @@ contract Charity{
            tags.push(_s[i]);
         }
     }
-    function getNoOfDonors() public view returns (uint256) {
-        return noOfDonors;
-    }
-    function getTags() public view returns (string[] memory) {
-        return tags;
-    }
+    
       function withdraw() public payable {
         charityOwner.transfer(address(this).balance);
         isOpen=false;
     }
-    function getDonors() public view returns (address[] memory) {
-        return donors;
-    }
+ 
     function getCollectionPercentage() public view returns(uint256){
         return ((amountCollected*100)/requiredAmount);
     }
