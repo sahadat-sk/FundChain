@@ -10,6 +10,7 @@ contract Charity{
     uint256 public minAmount;
     uint256 public amountCollected;
     bool public isOpen;
+    uint256 public noOfDonors;
     address[] public donors;
     mapping (address => bool) hasDonated; // To check if the sameperson has donated before
     constructor (address _charityowner, string memory _charityname, uint256 _requiredamount, string memory _funddescription, uint256 _minamount)  {
@@ -20,6 +21,7 @@ contract Charity{
         minAmount = _minamount;
         tags = new string[](0);
         isOpen = true;
+        noOfDonors=0;
         donors = new address[](0);
         amountCollected = 0;
     }
@@ -42,6 +44,7 @@ contract Charity{
         if (!hasDonated[msg.sender])
         {
             donors.push(msg.sender);
+            noOfDonors++;
         }
         hasDonated[msg.sender]=true;
     }
@@ -51,7 +54,9 @@ contract Charity{
            tags.push(_s[i]);
         }
     }
-
+    function getNoOfDonors() public view returns (uint256) {
+        return noOfDonors;
+    }
     function getTags() public view returns (string[] memory) {
         return tags;
     }
